@@ -4,3 +4,4 @@ torch
 numpy
 opencv-python-headless
 protobuf < 4.21.5
+ultralytics
