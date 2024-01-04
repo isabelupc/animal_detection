@@ -41,7 +41,7 @@ def infer_image(img, size=224):
     model.conf = 0.25
     result = model(img, size=size) 
     result.render()
-    image = Image.fromarray(result.ims[0])
+    image = cv2.cvtColor(result.ims[0], cv2.IMREAD_COLOR)
     return image
 
 global model
