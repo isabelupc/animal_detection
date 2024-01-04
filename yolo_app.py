@@ -4,15 +4,9 @@ import torch
 import numpy as np 
 import cv2
 
-# nomes per windows
-#import pathlib
-#temp = pathlib.PosixPath
-#pathlib.PosixPath = pathlib.WindowsPath
-#######
-
 @st.cache_resource
 def load_model(path, device):
-    model_ = torch.hub.load('ultralytics/yolov5', 'custom', path=path, force_reload=True)
+    model_ = torch.hub.load('.', 'custom', path=path, source='local')
     model_.to(device)
     print("model to ", device)
     return model_
