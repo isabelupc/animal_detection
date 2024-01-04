@@ -4,3 +4,5 @@ torch
 numpy
 opencv-python-headless
 protobuf
+request
+psutil
