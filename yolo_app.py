@@ -4,11 +4,21 @@ import torch
 import numpy as np 
 import cv2
 
+# nomes per windows
+import pathlib
+temp = pathlib.PosixPath
+pathlib.PosixPath = pathlib.WindowsPath
+#######
+
 @st.cache_resource
 def load_model(path, device):
-    model_ = torch.hub.load('.', 'custom', path=path, source='local')
+    #model_ = torch.hub.load('ultralytics/yolov5', 'custom', path=path, force_reload=True)
+    #model_ = torch.hub.load('.', 'custom', path=path,source='local')
+    #model_ = torch.jit.load(path)
+    model_=torch.load('elmeumodel')
     model_.to(device)
-    print("model to ", device)
+    #torch.save(model_,'elmeumodel')
+    #print("model to ", device)
     return model_
  
 def image_input():
@@ -33,7 +43,6 @@ def infer_image(img, size=224):
     result.render()
     image = Image.fromarray(result.ims[0])
     return image
-
 
 global model
 st.set_page_config(layout="wide")
