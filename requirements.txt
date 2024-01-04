@@ -3,6 +3,6 @@ Pillow
 torch
 numpy
 opencv-python-headless
-protobuf
+protobuf < 4.21.5
 request
 psutil
