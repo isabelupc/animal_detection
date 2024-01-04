@@ -5,9 +5,9 @@ import numpy as np
 import cv2
 
 # nomes per windows
-import pathlib
-temp = pathlib.PosixPath
-pathlib.PosixPath = pathlib.WindowsPath
+#import pathlib
+#temp = pathlib.PosixPath
+#pathlib.PosixPath = pathlib.WindowsPath
 #######
 
 @st.cache_resource
