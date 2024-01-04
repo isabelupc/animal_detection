@@ -12,10 +12,10 @@ pathlib.PosixPath = pathlib.WindowsPath
 
 @st.cache_resource
 def load_model(path, device):
-    #model_ = torch.hub.load('ultralytics/yolov5', 'custom', path=path, force_reload=True)
+    model_ = torch.hub.load('ultralytics/yolov5', 'custom', path=path, force_reload=True)
     #model_ = torch.hub.load('.', 'custom', path=path,source='local')
     #model_ = torch.jit.load(path)
-    model_=torch.load('elmeumodel')
+    #model_=torch.load('elmeumodel')
     model_.to(device)
     #torch.save(model_,'elmeumodel')
     #print("model to ", device)
