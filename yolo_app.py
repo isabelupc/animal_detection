@@ -10,7 +10,7 @@ def load_model(path, device):
  
 def image_input():
     img_file = None
-    img_bytes = st.file_uploader("Tria o arrosega una imatge", type=['png', 'jpeg', 'jpg','webp'])
+    img_bytes = st.file_uploader("Tria o arrossega una imatge", type=['png', 'jpeg', 'jpg','webp'])
     if img_bytes is not None :
         img_file = Image.open(img_bytes)
     if img_file is not None:
