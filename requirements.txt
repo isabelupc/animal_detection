@@ -1,7 +1,0 @@
-ultralytics
-streamlit
-Pillow
-torch
-numpy
-opencv-python-headless==4.9.0.80
-protobuf < 4.21.5
