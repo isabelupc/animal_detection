@@ -1,4 +1,0 @@
-stremlit
-torch
-Pillow
-ultralytics
