@@ -6,7 +6,6 @@ from PIL import Image
 def load_model(path, device):
     torch.hub._validate_not_a_forked_repo=lambda a,b,c: True
     model_ = torch.hub.load('ultralytics/yolov5', 'custom', path=path, force_reload=True)
-    model_.to(device)
     return model_
  
 def image_input():
@@ -25,9 +24,9 @@ def image_input():
                     'ymin':st.column_config.NumberColumn('Y1',format='%d',width='small'),
                     'xmax':st.column_config.NumberColumn('X2',format='%d',width='small'),
                     'ymax':st.column_config.NumberColumn('Y2',format='%d',width='small'),
-                    'confidence':st.column_config.NumberColumn('Confiança',format='%.3f',width='medium'),
+                    'confidence':st.column_config.NumberColumn('Confiança',format='%.3f',width='small'),
                     'class':st.column_config.NumberColumn('Classe',format='%d',width='small'),
-                    'name':st.column_config.Column('Nom',width='large')}
+                    'name':st.column_config.Column('Nom',width='medium')}
             st.dataframe(taula,hide_index=True,column_config=config,width=imatge.size[0])
     
 def infer_image(img, size=416):
