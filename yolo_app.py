@@ -41,5 +41,3 @@ st.set_page_config(layout="wide")
 st.title("Detecció i Classificació d'Animals")
 model = load_model('best.pt', 'cpu')
 image_input()
-
-
